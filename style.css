@@ -1,6 +1,7 @@
 :root {
     --key-width: calc(85vw / 15);
-  }
+}
+
 
 textarea {
     min-width: 320px;
@@ -26,12 +27,27 @@ textarea {
     height: var(--key-width);
     min-height: 40px;
     flex-basis: var(--key-width);
-    font-size: calc(1em + 0.4vw);
+    font-size: calc(1em + 0.3vw);
+    color: #2e2e2e;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: aquamarine;
+    transition: color, background-color 3s;
+    cursor: pointer;
+}
+
+.keyboard__ul__li:hover {
+    color: rgb(24, 24, 24);
+    background-color: rgb(95, 211, 226);
+    transition: color, background-color 1s;
+}
+
+.keyboard__ul__li.active {
+    color: black;
+    background-color: aqua;
+    transition: color, background-color 1s;
 }
 
 .key_backspace {
@@ -42,7 +58,7 @@ textarea {
     flex-basis: calc(var(--key-width) + 1vw);
 }
 
-.key_caps_lock {
+.key_capslock {
     flex-basis: calc(var(--key-width) * 1.8);
 }
 
@@ -56,4 +72,8 @@ textarea {
 
 .key_space {
     flex: 1 0 calc(var(--key-width) * 2);
+}
+
+.key_ctrl {
+    flex-basis: calc(var(--key-width) + 0.5vw);
 }
