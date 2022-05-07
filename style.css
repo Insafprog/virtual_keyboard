@@ -1,0 +1,59 @@
+:root {
+    --key-width: calc(85vw / 15);
+  }
+
+textarea {
+    min-width: 320px;
+    min-height: 100px;
+    max-width: 720px;
+    max-height: 300px;
+}
+
+#keyboard__ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    height: calc(var(--key-width) * 5 + 4vw);
+    min-height: calc(200px + 4vw);
+    width: 100vw;
+    gap: 1vw;
+}
+
+.keyboard__ul__li {
+    position: relative;
+    list-style-type: none;
+    height: var(--key-width);
+    min-height: 40px;
+    flex-basis: var(--key-width);
+    font-size: calc(1em + 0.4vw);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+}
+
+.key_backspace {
+    flex: 1 0 calc(var(--key-width) * 2);
+}
+
+.key_tab {
+    flex-basis: calc(var(--key-width) + 1vw);
+}
+
+.key_caps_lock {
+    flex-basis: calc(var(--key-width) * 1.8);
+}
+
+.key_enter {
+    flex: 1 0 calc(var(--key-width) * 2);
+}
+
+.key_shift {
+    flex: 1 0 calc(var(--key-width) * 2);
+}
+
+.key_space {
+    flex: 1 0 calc(var(--key-width) * 2);
+}
