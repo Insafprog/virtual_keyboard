@@ -1,13 +1,24 @@
 :root {
-    --key-width: calc(85vw / 15);
+    --key-width: calc((85vw - 20px) / 15);
+}
+
+body {
+    margin-left: 0;
+    margin-right: 0;
 }
 
 
 textarea {
-    min-width: 320px;
-    min-height: 100px;
-    max-width: 720px;
-    max-height: 300px;
+    width: 600px;
+    height: 200px;
+}
+
+#keyboard {
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #f1f1f1;
 }
 
 #keyboard__ul {
@@ -17,7 +28,7 @@ textarea {
     flex-wrap: wrap;
     height: calc(var(--key-width) * 5 + 4vw);
     min-height: calc(200px + 4vw);
-    width: 100vw;
+    width: calc(100vw - 20px);
     gap: 1vw;
 }
 
@@ -44,36 +55,36 @@ textarea {
     transition: color, background-color 1s;
 }
 
-.keyboard__ul__li.active {
+.keyboard__ul__li[active] {
     color: black;
     background-color: aqua;
-    transition: color, background-color 1s;
+    transition: color, background-color 0.1s;
 }
 
-.key_backspace {
+.keyboard__ul__li[button="Backspace"] {
     flex: 1 0 calc(var(--key-width) * 2);
 }
 
-.key_tab {
+.keyboard__ul__li[button="Tab"] {
     flex-basis: calc(var(--key-width) + 1vw);
 }
 
-.key_capslock {
-    flex-basis: calc(var(--key-width) * 1.8);
+.keyboard__ul__li[button="CapsLock"] {
+    flex-basis: calc(var(--key-width) * 2);
 }
 
-.key_enter {
+.keyboard__ul__li[button="Enter"] {
     flex: 1 0 calc(var(--key-width) * 2);
 }
 
-.key_shift {
+.keyboard__ul__li[button="Shift"] {
     flex: 1 0 calc(var(--key-width) * 2);
 }
 
-.key_space {
+.keyboard__ul__li[button="Space"] {
     flex: 1 0 calc(var(--key-width) * 2);
 }
 
-.key_ctrl {
+.keyboard__ul__li[button="Control"] {
     flex-basis: calc(var(--key-width) + 0.5vw);
 }
